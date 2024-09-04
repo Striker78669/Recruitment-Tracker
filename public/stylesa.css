@@ -1,0 +1,111 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('add.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+h1 {
+    color: #0e0e0e;
+    /* Light color for contrast against a darker background */
+    margin-bottom: 30px;
+}
+
+
+/* Form Styles */
+
+form {
+    background: rgba(136, 135, 135, 0.9);
+    /* Darker background with slight transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Input Fields */
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="url"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    /* Darker border color */
+    border-radius: 5px;
+    background-color: #535151;
+    /* Darker background for input fields */
+    color: #fff;
+    /* Light text color for readability */
+    box-sizing: border-box;
+}
+
+
+/* Submit Button */
+
+button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #45a049;
+}
+
+button.submit-btn:active {
+    background-color: #388E3C;
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Back Button */
+
+button.back-btn {
+    width: 26%;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.back-btn:hover {
+    background-color: #007bb5;
+}
+
+
+/* Error Message Styles */
+
+p.error {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}

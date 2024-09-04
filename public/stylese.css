@@ -1,0 +1,135 @@
+/* General Styles */
+
+body {
+    background-color: #7a7474;
+    /* Dark background for better contrast */
+    background: url('log.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: #fff;
+    /* Light text color */
+}
+
+
+/* Container Styles */
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: rgba(123, 116, 136, 0.8);
+    /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(83, 81, 81, 0.3);
+}
+
+
+/* Heading Styles */
+
+h1 {
+    text-align: center;
+    color: #fff;
+    /* Light text color */
+}
+
+
+/* Label Styles */
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ddd;
+    /* Lighter label text color */
+}
+
+
+/* Input and Select Styles */
+
+input,
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    /* Darker border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #6d6060;
+    /* Dark input field background */
+    color: #fff;
+    /* Light text color for input fields */
+}
+
+
+/* Button Styles */
+
+button {
+    background-color: #28a745;
+    /* Green background for the button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+button:active {
+    background-color: #1e7e34;
+    /* Even darker green on click */
+}
+
+
+/* Back Button Styles */
+
+.back-button {
+    background-color: #007bff;
+    /* Blue background for the back button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+.back-button:active {
+    background-color: #004085;
+    /* Even darker blue on click */
+}
+
+
+/* Error Message Styles */
+
+p {
+    color: #ff3333;
+    /* Red color for error messages */
+    text-align: center;
+    margin-bottom: 20px;
+}

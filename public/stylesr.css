@@ -1,0 +1,141 @@
+/* General Styles */
+
+body {
+    background-color: #2c2c2c;
+    /* Dark background */
+    background: url('add.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    color: #ffffff;
+    /* Light text color */
+}
+
+
+/* Container Styles */
+
+form {
+    background-color: rgba(80, 73, 93, 0.8);
+    /* Dark background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Heading Styles */
+
+h1 {
+    text-align: center;
+    color: #171616;
+    text-emphasis: double-circle black;
+    /* Light text color */
+    margin-top: 8%;
+    margin-bottom: 50px;
+}
+
+
+/* Label Styles */
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #dddddd;
+    /* Lighter label text color */
+}
+
+
+/* Input Fields */
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #555;
+    /* Darker border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #898888;
+    /* Dark input background */
+    color: #ffffff;
+    /* Light text color */
+}
+
+
+/* Register Button */
+
+button[type="submit"] {
+    background-color: #28a745;
+    /* Green background */
+    color: #ffffff;
+    /* Light text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 35px;
+    width: 95%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+button[type="submit"]:active {
+    background-color: #1e7e34;
+    /* Even darker green on click */
+}
+
+
+/* Login Button */
+
+button.login-button {
+    background-color: #007bff;
+    /* Blue background for login button */
+    color: #ffffff;
+    /* Light text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 26%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.login-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+}
+
+button.login-button:active {
+    background-color: #004085;
+    /* Even darker blue on click */
+}
+
+
+/* Error Message Styles */
+
+p {
+    color: #ff3333;
+    /* Red color for error messages */
+    text-align: center;
+    margin-bottom: 20px;
+}

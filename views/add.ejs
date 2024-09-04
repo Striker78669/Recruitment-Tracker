@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Recruitment Information</title>
+    <link rel="stylesheet" href="stylesa.css">
+</head>
+
+<body>
+    <h1>Add Recruitment Information</h1>
+
+    <% if (error) { %>
+        <p class="error">
+            <%= error %>
+        </p>
+        <% } %>
+
+            <form action="/add" method="post">
+                <label for="companyName">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" required>
+
+                <label for="talkDate">Pre-Placement Talk Date and Time:</label>
+                <input type="datetime-local" id="talkDate" name="talkDate" required>
+
+                <label for="assessmentDate">Online Assessment Date and Time:</label>
+                <input type="datetime-local" id="assessmentDate" name="assessmentDate" required>
+
+                <label for="assessmentWebsite">Website for Online Assessment:</label>
+                <input type="url" id="assessmentWebsite" name="assessmentWebsite" required>
+
+                <label for="interviewDate">Interview Date and Time (if shortlisted):</label>
+                <input type="datetime-local" id="interviewDate" name="interviewDate">
+
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+            <option value="not qualified">Not Qualified</option>
+            <option value="shortlisted">Shortlisted</option>
+        </select>
+
+                <button type="submit" class="submit-btn">Add</button>
+            </form>
+
+            <button class="back-btn" onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+</body>
+
+</html>

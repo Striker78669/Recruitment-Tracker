@@ -1,0 +1,120 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('log.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    /* Ensure elements stack vertically */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    text-emphasis: double-circle black;
+    /* Space below the heading */
+}
+
+
+/* Form Styles */
+
+form {
+    background: rgba(80, 73, 93, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    /* Adjust based on your needs */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center-align form elements */
+}
+
+
+/* Input Fields */
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+}
+
+
+/* Login Button */
+
+button[type="submit"] {
+    width: 350px;
+    /* Ensure it's the same width as the form or adjust as needed */
+    padding: 10px;
+    background-color: #4CAF50;
+    /* Green background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+    margin-top: 20px;
+    /* Space above the button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+    /* Slightly darker green on hover */
+}
+
+button[type="submit"]:active {
+    background-color: #388E3C;
+    /* Darker green when button is pressed */
+    transform: translateY(1px);
+    /* Slight press effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Reset shadow on press */
+}
+
+
+/* Register Button */
+
+button.register-btn {
+    width: 350px;
+    /* Ensure it's the same width as the form or adjust as needed */
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-sizing: border-box;
+    /* Ensure padding and border are included in the width */
+    margin-top: 20px;
+    /* Space above the button */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.register-btn:hover {
+    background-color: #007bb5;
+}
+
+
+/* Error Message Styles */
+
+p {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Space below the error message */
+}

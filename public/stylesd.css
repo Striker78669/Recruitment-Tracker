@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header button {
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #e64444;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-image: url('dash.jpeg');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 70px);
+}
+
+
+/* Table Styling */
+
+.table-container {
+    width: 85%;
+    background-color: rgba(48, 43, 56, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #fff;
+    margin-top: 25px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    font-size: 16px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px;
+    border-bottom: none;
+}
+
+th {
+    background-color: #444;
+    font-weight: 600;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+td:first-child,
+th:first-child {
+    padding-left: 20px;
+}
+
+td:last-child,
+th:last-child {
+    padding-right: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+
+/* Improved Link Styling */
+
+
+/* Ensure that all links inside table cells are styled */
+
+table td a {
+    color: #00FFFF;
+    /* Light cyan color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent dark background */
+    padding: 2px 4px;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+table td a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Change background on hover */
+    color: #ffffff;
+}
+
+
+/* Rest of your CSS here */
+
+
+/* Footer Buttons */
+
+.footer-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+}
+
+.add-button,
+.download-button {
+    background-color: #008cba;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover,
+.download-button:hover {
+    background-color: #007bb5;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}

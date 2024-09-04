@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Edit Company</title>
+    <link rel="stylesheet" href="/stylese.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Edit Company Information</h1>
+        <% if (error) { %>
+            <p>
+                <%= error %>
+            </p>
+            <% } %>
+
+                <form action="/edit/<%= company.id %>" method="post">
+                    <label for="companyName">Company Name:</label>
+                    <input type="text" id="companyName" name="companyName" value="<%= company.company_name %>" required>
+
+                    <label for="talkDate">Pre-Placement Talk Date and Time:</label>
+                    <input type="datetime-local" id="talkDate" name="talkDate" value="<%= company.pre_placement_talk %>T<%= company.pre_placement_time %>" required>
+
+                    <label for="assessmentDate">Online Assessment Date and Time:</label>
+                    <input type="datetime-local" id="assessmentDate" name="assessmentDate" value="<%= company.assessment_date %>T<%= company.assessment_time %>" required>
+
+                    <label for="assessmentWebsite">Website for Online Assessment:</label>
+                    <input type="url" id="assessmentWebsite" name="assessmentWebsite" value="<%= company.assessment_website %>" required>
+
+                    <label for="interviewDate">Interview Date and Time (if shortlisted):</label>
+                    <input type="datetime-local" id="interviewDate" name="interviewDate" value="<%= company.interview_date %>T<%= company.interview_time %>">
+
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                <option value="not qualified" <%= company.status === 'not qualified' ? 'selected' : '' %>>Not Qualified</option>
+                <option value="shortlisted" <%= company.status === 'shortlisted' ? 'selected' : '' %>>Shortlisted</option>
+            </select>
+
+                    <button type="submit">Update</button>
+                </form>
+
+                <button class="back-button" onclick="window.location.href='/dashboard'">Back to Dashboard</button>
+    </div>
+</body>
+
+</html>

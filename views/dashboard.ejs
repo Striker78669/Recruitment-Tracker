@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment Dashboard</title>
+    <link rel="stylesheet" href="stylesd.css">
+</head>
+
+<body>
+    <header>
+        <h1>Recruitment Dashboard</h1>
+        <button onclick="window.location.href='/logout'">Logout</button>
+    </header>
+
+    <main>
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Pre-Placement Talk</th>
+                        <th>Assessment</th>
+                        <th>Website</th>
+                        <th>Interview</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% if (companies.length > 0) { %>
+                        <% companies.forEach(company => { %>
+                            <tr>
+                                <td>
+                                    <%= company.company_name %>
+                                </td>
+                                <td>
+                                    <%= company.pre_placement_talk || 'N/A' %> at
+                                        <%= company.pre_placement_time || 'N/A' %>
+                                </td>
+                                <td>
+                                    <%= company.assessment_date || 'N/A' %> at
+                                        <%= company.assessment_time || 'N/A' %>
+                                </td>
+                                <td>
+                                    <a href="<%= company.assessment_website %>" target="_blank">
+                                        <%= company.assessment_website || 'N/A' %>
+                                    </a>
+                                </td>
+                                <td>
+                                    <%= company.interview_date || 'N/A' %> at
+                                        <%= company.interview_time || 'N/A' %>
+                                </td>
+                                <td>
+                                    <%= company.status %>
+                                </td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="edit-button" onclick="window.location.href='/edit/<%= company.id %>'">Edit</button>
+                                        <button class="delete-button" onclick="if(confirm('Are you sure you want to delete this item?')) window.location.href='/delete/<%= company.id %>'">Delete</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <% }) %>
+                                <% } else { %>
+                                    <tr>
+                                        <td colspan="7">No company found</td>
+                                    </tr>
+                                    <% } %>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="footer-buttons">
+            <button class="add-button" onclick="window.location.href='/add'">Add New Company</button>
+            <button class="download-button" onclick="window.location.href='/download'">Download PDF</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recruitment Dashboard. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
